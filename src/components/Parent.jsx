@@ -7,7 +7,7 @@ export default function Parent() {
   const [data, setData] = useState([
     {
       me: "Waleed",
-      friend: "Someone",
+      friend: "Some",
       total: 100,
       youPaid: 0,
       hePaid: 100,
@@ -20,7 +20,7 @@ export default function Parent() {
       {showModal ? <Modal modal={showModal} setModal={setShowModal} /> : null}
       <div className="mainContainer">
         <div className="title">List of Pending Orders</div>
-        <Card data={data} />
+        <Card data={data} setData={setData} />
         <div className="buttons">
           <Button css="add" modal={showModal} setModal={setShowModal}>
             Add

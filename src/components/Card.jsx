@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import Button from "./Button";
 
-export default function Card({ data }) {
+export default function Card({ data, setData }) {
   return (
     <>
       {data.length < 1 ? (
@@ -8,18 +9,22 @@ export default function Card({ data }) {
           <p>Add Now!</p>
         </div>
       ) : (
-        <div className="card">
-          <div className="detail">
-            <h4>
-              You: <span>Waleed</span>
-            </h4>
-            <h4>
-              Friend: <span>Someone</span>
-            </h4>
-            <p>💰:</p>
-          </div>
-          <button>X</button>
-        </div>
+        data.map((item) => {
+          return (
+            <div className="card" key={item.me}>
+              <div className="detail">
+                <h4>
+                  You: <span>{item.me}</span>
+                </h4>
+                <h4>
+                  Friend: <span>{item.friend}</span>
+                </h4>
+                <p>💰:</p>
+              </div>
+              <button>X</button>
+            </div>
+          );
+        })
       )}
     </>
   );
