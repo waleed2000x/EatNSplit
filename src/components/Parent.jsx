@@ -4,12 +4,20 @@ import Card from "./Card";
 import Modal from "./Modal";
 
 export default function Parent() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([
+    {
+      me: "Waleed",
+      friend: "Someone",
+      total: 100,
+      youPaid: 0,
+      hePaid: 100,
+    },
+  ]);
   const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="parent">
-      {showModal ? <Modal /> : null}
+      {showModal ? <Modal modal={showModal} setModal={setShowModal} /> : null}
       <div className="mainContainer">
         <div className="title">List of Pending Orders</div>
         <Card data={data} />
@@ -17,7 +25,9 @@ export default function Parent() {
           <Button css="add" modal={showModal} setModal={setShowModal}>
             Add
           </Button>
-          <Button css="reset">Reset</Button>
+          <Button modal={showModal} setModal={setShowModal} css="reset">
+            Reset
+          </Button>
         </div>
       </div>
     </div>
