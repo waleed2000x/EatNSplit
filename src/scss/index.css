@@ -7,17 +7,24 @@
   color: #fff;
 }
 
-.parent {
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 90vh;
+  min-height: 99vh;
 }
-.parent h1 {
+.app h1 {
   margin-top: 50px;
 }
-.parent h1 b {
+.app h1 b {
   font-size: 100px;
   color: #0047ab;
+}
+.app .parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
 }/*# sourceMappingURL=index.css.map */
