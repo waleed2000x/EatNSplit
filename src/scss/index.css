@@ -45,6 +45,19 @@
   width: 100%;
   margin-top: 20px;
 }
+.parent .mainContainer .cardEmpty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+  background: #1c2321;
+}
+.parent .mainContainer .cardEmpty p {
+  padding: 10px;
+  font-size: 30px;
+}
 .parent .mainContainer .card {
   display: flex;
   justify-content: space-between;
@@ -102,4 +115,14 @@
   padding: 10px;
   background: goldenrod;
   border: none;
+}
+.parent .modalParent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
 }/*# sourceMappingURL=index.css.map */
