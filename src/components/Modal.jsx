@@ -1,24 +1,64 @@
-import { FormControlLabel, Radio, RadioGroup, TextField } from "@mui/material";
-import { useState } from "react";
+import {
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  TextField,
+  Button,
+} from "@mui/material";
+import { useFormik } from "formik";
+import ModalSchema from "./ModalSchema";
 
-export default function Modal() {
-  const [paymentOption, setPaymentOption] = useState("ME");
+const iValues = {
+  me: "",
+  friend: "",
+  amount: 0,
+  whoPays: "",
+};
 
-  const handlePaymentChange = (event) => {
-    setPaymentOption(event.target.value);
-  };
+export default function Modal({ setData }) {
+  const { values, errors, handleChange, handleSubmit, resetForm } = useFormik({
+    initialValues: iValues,
+    validationSchema: ModalSchema,
+    onSubmit: () => {
+      resetForm();
+      setData(() => values);
+      console.log(values);
+    },
+  });
+
   return (
     <div className="modalParent">
-      <form>
-        <TextField label="You" variant="outlined" />
-        <TextField label="Friend" variant="outlined" />
-        <TextField label="Amount" variant="outlined" />
+      <form onSubmit={handleSubmit}>
+        <TextField
+          label="You"
+          variant="outlined"
+          name="me"
+          value={values.me}
+          onChange={handleChange}
+        />
+        {errors.me && <div className="error">{errors.me}</div>}
+        <TextField
+          label="Friend"
+          variant="outlined"
+          name="friend"
+          value={values.friend}
+          onChange={handleChange}
+        />
+        {errors.friend && <div className="error">{errors.friend}</div>}
+        <TextField
+          label="Amount"
+          variant="outlined"
+          name="amount"
+          value={values.amount}
+          onChange={handleChange}
+        />
+        {errors.amount && <div className="error">{errors.amount}</div>}
         <RadioGroup
           row
           aria-label="payment"
-          name="payment"
-          value={paymentOption}
-          onChange={handlePaymentChange}
+          name="whoPays"
+          value={values.whoPayes}
+          onChange={handleChange}
         >
           <FormControlLabel
             value="ME"
@@ -33,6 +73,7 @@ export default function Modal() {
             labelPlacement="end"
           />
         </RadioGroup>
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   );
