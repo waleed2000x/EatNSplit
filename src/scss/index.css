@@ -1,41 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Kanit:ital,wght@0,400;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Iso&display=swap");
 * {
-  font-family: "Rubik Iso", cursive;
   margin: 0px;
   padding: 0px;
-  background: #1c2321;
   color: #fff;
 }
 
 .app {
+  background: #1c2321;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 99vh;
+  height: 100vh;
 }
 .app h1 {
+  font-family: "Rubik Iso", cursive;
   margin-top: 50px;
 }
 .app h1 b {
   font-size: 100px;
   color: #0047ab;
 }
-.app .parent {
-  display: flex;
-  justify-content: center;
-  width: 60%;
-  min-height: 60vh;
-}
-.app .parent .listContainer {
+
+.parent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  min-height: 100%;
   background-color: #7d98a1;
+  border-radius: 10px;
+  width: 60%;
+  height: 60vh;
 }
-.app .parent .listContainer h2 {
-  margin: 20px 0px;
-  background-color: inherit;
+.parent .mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.parent .mainContainer .title {
+  text-align: center;
+  font-family: "Rubik Iso", cursive;
+  font-size: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+.parent .mainContainer .card {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 5px;
+  background: #1c2321;
+}
+.parent .mainContainer .card .detail {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=index.css.map */

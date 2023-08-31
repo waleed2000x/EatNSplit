@@ -3,40 +3,56 @@ $black: #1c2321;
 $blue: #0047ab;
 $grey: #7d98a1;
 * {
-  font-family: "Rubik Iso", cursive;
   margin: 0px;
   padding: 0px;
-  background: $black;
   color: #fff;
 }
 .app {
+  background: $black;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 99vh;
+  height: 100vh;
   & h1 {
+    font-family: "Rubik Iso", cursive;
     margin-top: 50px;
     & b {
       font-size: 100px;
       color: $blue;
     }
   }
-  .parent {
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $grey;
+  border-radius: 10px;
+  width: 60%;
+  height: 60vh;
+  .mainContainer {
     display: flex;
-    justify-content: center;
-    width: 60%;
-    min-height: 60vh;
-    .listContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    .title {
+      text-align: center;
+      font-family: "Rubik Iso", cursive;
+      font-size: 40px;
       width: 100%;
-      min-height: 100%;
-      background-color: $grey;
-      & h2 {
-        margin: 20px 0px;
-        background-color: inherit;
+      margin-top: 20px;
+    }
+    .card {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      border-radius: 5px;
+      background: $black;
+      .detail {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
