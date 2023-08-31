@@ -15,20 +15,21 @@ const iValues = {
   whoPays: "",
 };
 
-export default function Modal({ setData }) {
+export default function Modal({ setData, setModal }) {
   const { values, errors, handleChange, handleSubmit, resetForm } = useFormik({
     initialValues: iValues,
     validationSchema: ModalSchema,
     onSubmit: () => {
       resetForm();
       setData(() => values);
+      setModal(false);
       console.log(values);
     },
   });
 
   return (
     <div className="modalParent">
-      <form onSubmit={handleSubmit}>
+      <form>
         <TextField
           label="You"
           variant="outlined"
@@ -73,7 +74,7 @@ export default function Modal({ setData }) {
             labelPlacement="end"
           />
         </RadioGroup>
-        <Button type="submit">Submit</Button>
+        <Button onClick={handleSubmit}>Submit</Button>
       </form>
     </div>
   );

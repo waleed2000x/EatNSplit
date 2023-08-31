@@ -9,6 +9,7 @@ export default function Card({ data, setData }) {
           <p>Add Now!</p>
         </div>
       ) : (
+        data.length < 1 &&
         data.map((item) => {
           return (
             <div className="card" key={item.me}>
