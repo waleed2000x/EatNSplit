@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import Button from "./Button";
-
+import CancelIcon from "@mui/icons-material/Cancel";
+import { IconButton } from "@mui/material";
 export default function Card({ data, setData }) {
   return (
     <>
@@ -21,7 +21,9 @@ export default function Card({ data, setData }) {
                 </h4>
                 <p>💰:</p>
               </div>
-              <button>X</button>
+              <IconButton color="error">
+                <CancelIcon />
+              </IconButton>
             </div>
           );
         })

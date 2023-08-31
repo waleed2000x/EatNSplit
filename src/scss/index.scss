@@ -117,12 +117,38 @@ $grey: #7d98a1;
   }
   .modalParent {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 0px;
     left: 0px;
     display: flex;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
+    & form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 60%;
+      width: 40%;
+      justify-content: space-evenly;
+      background-color: #797979;
+      border-radius: 30px;
+      .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root
+        .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+        width: 100%;
+      }
+      .css-dmmspl-MuiFormGroup-root {
+        display: flex;
+      }
+      .css-1m9pwf3 {
+        background: #000;
+      }
+      .css-ahj2mt-MuiTypography-root {
+        color: $black;
+      }
+    }
   }
 }
