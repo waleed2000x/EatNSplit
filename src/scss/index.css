@@ -24,7 +24,18 @@
 .app .parent {
   display: flex;
   justify-content: center;
+  width: 60%;
+  min-height: 60vh;
+}
+.app .parent .listContainer {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  min-height: 100%;
+  background-color: #7d98a1;
+}
+.app .parent .listContainer h2 {
+  margin: 20px 0px;
+  background-color: inherit;
 }/*# sourceMappingURL=index.css.map */

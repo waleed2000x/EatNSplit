@@ -25,10 +25,19 @@ $grey: #7d98a1;
   .parent {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    min-height: 60vh;
     .listContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-height: 100%;
+      background-color: $grey;
+      & h2 {
+        margin: 20px 0px;
+        background-color: inherit;
+      }
     }
   }
 }
