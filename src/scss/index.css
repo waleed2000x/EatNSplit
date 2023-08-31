@@ -48,6 +48,7 @@
 .parent .mainContainer .card {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
   border-radius: 5px;
   background: #1c2321;
@@ -55,4 +56,50 @@
 .parent .mainContainer .card .detail {
   display: flex;
   flex-direction: column;
+}
+.parent .mainContainer .card .detail h4 {
+  padding: 10px;
+  color: #0047ab;
+}
+.parent .mainContainer .card .detail h4 span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.parent .mainContainer .card .detail p {
+  padding: 10px;
+  color: #0047ab;
+}
+.parent .mainContainer .card .detail p span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.parent .mainContainer .card button {
+  width: 35px;
+  height: 35px;
+  margin: 0px 10px;
+  font-weight: 900;
+  color: rgb(219, 0, 0);
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+}
+.parent .mainContainer .buttons {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.parent .mainContainer .buttons .add {
+  font-weight: 600;
+  color: #1c2321;
+  padding: 10px;
+  background: rgb(0, 179, 0);
+  border: none;
+}
+.parent .mainContainer .buttons .reset {
+  font-weight: 600;
+  color: #1c2321;
+  padding: 10px;
+  background: goldenrod;
+  border: none;
 }/*# sourceMappingURL=index.css.map */

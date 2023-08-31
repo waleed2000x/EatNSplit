@@ -47,12 +47,59 @@ $grey: #7d98a1;
     .card {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 90%;
       border-radius: 5px;
       background: $black;
       .detail {
         display: flex;
         flex-direction: column;
+        & h4 {
+          padding: 10px;
+          color: #0047ab;
+          & span {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+        & p {
+          padding: 10px;
+          color: #0047ab;
+          & span {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+      & button {
+        width: 35px;
+        height: 35px;
+        margin: 0px 10px;
+        font-weight: 900;
+        color: rgb(219, 0, 0);
+        font-size: 20px;
+        border-radius: 50%;
+        border: none;
+      }
+    }
+    .buttons {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      margin: 10px 0px;
+      .add {
+        font-weight: 600;
+        color: #1c2321;
+        padding: 10px;
+        background: rgb(0, 179, 0);
+        border: none;
+      }
+      .reset {
+        font-weight: 600;
+        color: #1c2321;
+        padding: 10px;
+        background: goldenrod;
+        border: none;
       }
     }
   }
