@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import CancelIcon from "@mui/icons-material/Cancel";
 import { IconButton } from "@mui/material";
+// eslint-disable-next-line no-unused-vars
 export default function Card({ data, setData }) {
   return (
     <>
