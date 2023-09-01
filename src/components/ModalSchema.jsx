@@ -5,6 +5,8 @@ const ModalSchema = Yup.object({
   friend: Yup.string().required("Required"),
   amount: Yup.number().required("Required"),
   whoPays: Yup.string().required("Required"),
+  hePaid: Yup.number(),
+  youPaid: Yup.number(),
 });
 
 export default ModalSchema;

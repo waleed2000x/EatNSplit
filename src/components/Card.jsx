@@ -23,6 +23,12 @@ export default function Card({ data, setData }) {
                   Friend: <span>{item.friend}</span>
                 </h4>
                 <p>💰:{item.amount}</p>
+                <p>Paid by:{item.whoPays}</p>
+                {item.whoPays === "ME" ? (
+                  <p>He ows you: {item.me}</p>
+                ) : (
+                  <p>You owe him:{item.me}</p>
+                )}
               </div>
               <IconButton color="error">
                 <CancelIcon />
