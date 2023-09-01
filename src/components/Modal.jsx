@@ -14,6 +14,8 @@ const iValues = {
   friend: "",
   amount: 0,
   whoPays: "",
+  hePaid: 0,
+  youPaid: 0,
 };
 
 export default function Modal({ setData, setModal }) {
@@ -74,6 +76,20 @@ export default function Modal({ setData, setModal }) {
             labelPlacement="end"
           />
         </RadioGroup>
+        <TextField
+          label="You Paid"
+          variant="outlined"
+          name="youPaid"
+          value={values.youPaid}
+          onChange={handleChange}
+        />
+        <TextField
+          label="He Paid"
+          variant="outlined"
+          name="hePaid"
+          value={values.hePaid}
+          onChange={handleChange}
+        />
         <Button onClick={handleSubmit}>Submit</Button>
       </form>
     </div>

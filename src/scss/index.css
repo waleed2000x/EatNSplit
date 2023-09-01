@@ -54,6 +54,7 @@
   width: max-content;
   border-radius: 5px;
   background: #1c2321;
+  margin: 90px 0px;
 }
 .parent .mainContainer .cardEmpty p {
   padding: 10px;

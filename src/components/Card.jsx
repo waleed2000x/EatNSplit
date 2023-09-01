@@ -25,9 +25,9 @@ export default function Card({ data, setData }) {
                 <p>💰:{item.amount}</p>
                 <p>Paid by:{item.whoPays}</p>
                 {item.whoPays === "ME" ? (
-                  <p>He ows you: {item.me}</p>
+                  <p>He owes you: {item.amount / 2 - item.hePaid}</p>
                 ) : (
-                  <p>You owe him:{item.me}</p>
+                  <p>You owe him:{item.amount / 2 - item.youPaid}</p>
                 )}
               </div>
               <IconButton color="error">
