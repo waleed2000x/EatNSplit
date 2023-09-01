@@ -22,9 +22,8 @@ export default function Modal({ setData, setModal }) {
     validationSchema: ModalSchema,
     onSubmit: () => {
       resetForm();
-      setData(() => values);
+      setData((preVal) => [...preVal, values]);
       setModal(false);
-      console.log(values);
     },
   });
 

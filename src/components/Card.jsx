@@ -3,14 +3,15 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import { IconButton } from "@mui/material";
 // eslint-disable-next-line no-unused-vars
 export default function Card({ data, setData }) {
+  console.log(data);
   return (
     <>
-      {data.length < 1 ? (
+      {Array.isArray(data) && data.length < 1 ? (
         <div className="cardEmpty">
           <p>Add Now!</p>
         </div>
       ) : (
-        data.length < 1 &&
+        Array.isArray(data) &&
         data.map((item) => {
           return (
             <div className="card" key={item.me}>
@@ -21,7 +22,7 @@ export default function Card({ data, setData }) {
                 <h4>
                   Friend: <span>{item.friend}</span>
                 </h4>
-                <p>💰:</p>
+                <p>💰:{item.amount}</p>
               </div>
               <IconButton color="error">
                 <CancelIcon />
