@@ -4,6 +4,11 @@ import { IconButton } from "@mui/material";
 // eslint-disable-next-line no-unused-vars
 export default function Card({ data, setData }) {
   console.log(data);
+  const handleDelete = (identifier) => {
+    const updatedData = data.filter((item) => item !== identifier);
+    setData(updatedData);
+  };
+
   return (
     <>
       {Array.isArray(data) && data.length < 1 ? (
@@ -30,7 +35,7 @@ export default function Card({ data, setData }) {
                   <p>You owe him:{item.amount / 2 - item.youPaid}</p>
                 )}
               </div>
-              <IconButton color="error">
+              <IconButton color="error" onClick={() => handleDelete(item)}>
                 <CancelIcon />
               </IconButton>
             </div>
