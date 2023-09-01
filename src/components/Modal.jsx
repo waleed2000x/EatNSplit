@@ -95,3 +95,32 @@ export default function Modal({ setData, setModal }) {
     </div>
   );
 }
+
+/*
+const [array, setArray] = useState([
+  {
+    name:'Waleed',
+    age : 23,
+    pay : 2000000,
+  },
+  {
+    name:'Ammar',
+    age : 33,
+    pay : 5000000,
+  },
+])
+
+const handleDelete = (identifier) => {
+    const updatedArray = array.filter((item)=> item !== identifier)
+    setArray(updatedArray)
+}
+
+array.map((item)=>{
+  return(
+    <p>item.name</p>
+    <p>item.age</p>
+    <p>item.pay</p>
+    <button onClick={()=> handleDelete(item)}> X </button>
+    )
+  })
+*/
