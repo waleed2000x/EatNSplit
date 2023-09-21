@@ -1,4 +1,5 @@
 # EatNSplit
 
 Just a practice project
-- where one can slipt a bill at the resturant
+- where one can split a bill at the restaurant.
+- 
